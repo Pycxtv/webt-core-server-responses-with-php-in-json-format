@@ -1,0 +1,15 @@
+{
+    "name": "onphpoint/02_json_responses",
+    "autoload": {
+        "psr-4": {
+            "OnPHPoint\\02JsonResponses\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Felix Wollmann",
+            "email": "50966625+felixwollmann@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
