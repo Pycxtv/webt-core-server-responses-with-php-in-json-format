@@ -8,6 +8,7 @@ class Song {
 		public string $name,
 		public string $artist,
 		public int $trackNumber,
+        /** song duration in seconds */
 		public float $duration
 	) {
 	}
