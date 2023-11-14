@@ -15,5 +15,7 @@
             "email": "75068841+Pycxtv@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "fakerphp/faker": "^1.23"
+    }
 }
