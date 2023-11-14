@@ -2,7 +2,7 @@
     "name": "onphpoint/02_json_responses",
     "autoload": {
         "psr-4": {
-            "OnPHPoint\\02JsonResponses\\": "src/"
+            "OnPHPoint\\JsonResponses\\": "src/"
         }
     },
     "authors": [

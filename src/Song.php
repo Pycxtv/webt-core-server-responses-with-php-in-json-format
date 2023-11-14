@@ -1,5 +1,7 @@
 <?php
 
+namespace OnPHPoint\JsonResponses;
+
 class Song {
 	public function __construct(
 		public int $id,
