@@ -1,16 +1,23 @@
 <?php
 require_once '../vendor/autoload.php';
+use OnPHPoint\JsonResponses\Seeder;
 header("Content-type: application/json");
 
-$ost_num = $_GET['ost'] ?? 'none';
+$osts = Seeder::generateOSTs(10);
 
-$seeder = new Seeder();
-$ost_arr = $seeder->generateOSTs();
+$ost_num = $_GET['ost'] ?? null;
 
-if ($ost_arr == 'none') {
-	echo json_encode($ost_arr);
+if (isset($ost_num)) {
+    $filtered = array_values(array_filter($osts, function($val) {
+        global $ost_num;
+        return $val->id == $ost_num;
+    }));
+    if (!isset($filtered[0])) {
+        http_response_code(404);
+    } else {
+	    echo json_encode($filtered[0]);
+
+    }
+} else {
+    echo json_encode($osts);
 }
-
-//echo <<<OUTPUT
-//{"track_number":$track_number}
-//OUTPUT;

@@ -9,7 +9,7 @@ class Seeder
     private static int $songIdCounter = 1;
     private static int $ostIdCounter = 1;
 
-    public static function generateOST($faker): Ost
+    private static function generateOST($faker): Ost
     {
         $songList = [];
         for ($i = 0; $i < 4; $i++) {
@@ -20,8 +20,8 @@ class Seeder
             $songList[] = new Song(self::$songIdCounter++, $name, $artist, $trackNumber, $duration);
         }
 
-        $videoGameName = $faker->words(2) . $faker->colorName();
-        $albumName = $faker->colorName() . $faker->colorName();
+        $videoGameName = $faker->words(2, true) . $faker->colorName();
+        $albumName = $faker->colorName() . ' ' .  $faker->companySuffix();
         $releaseYear = $faker->year();
         return new Ost(self::$ostIdCounter++, $albumName, $videoGameName, $releaseYear, $songList);
     }
