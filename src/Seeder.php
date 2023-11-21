@@ -9,10 +9,8 @@ class Seeder
     private static int $songIdCounter = 1;
     private static int $ostIdCounter = 1;
 
-    public static function generateOST(): Ost
+    public static function generateOST($faker): Ost
     {
-        $faker = Factory::create();
-
         $songList = [];
         for ($i = 0; $i < 4; $i++) {
             $name = $faker->colorName() . $faker->word();
@@ -31,9 +29,12 @@ class Seeder
     /** @return array<Ost> */
     public static function generateOSTs($n = 4): array
     {
+        $faker = Factory::create();
+        $faker->seed(1234);
+
         $osts = [];
         for ($i = 0; $i < $n; $i++) {
-            $osts[] = self::generateOST();
+            $osts[] = self::generateOST($faker);
         }
         return $osts;
     }
