@@ -71,3 +71,7 @@ Apply these advanced user stories to a fitting CORE scenario of your choice.
 
 #### Links
 https://my.skilldisplay.eu/en/skillset/360
+
+---
+
+- installing PHPUnit: `composer require --dev phpunit/phpunit`
