@@ -33,3 +33,16 @@ The Retro Videogame Fanclub of Vienna has approached you to contribute to the Op
 #### Links
 https://my.skilldisplay.eu/en/skillset/82
 
+---
+
+# Setup
+- some changes in `vhosts-conf` depending on file structure
+- symbolic link
+`ln -s "C:\Users\felix\OneDrive - HTL Wien 3 Rennweg\4BI\WEBT\Projekte\02_json_responses" json_02`
+- `.htaccess`
+```apacheconf
+RewriteEngine On
+# RewriteBase "."
+RewriteRule "^(\d+)$" "./index.php?ost=$1"
+```
+
