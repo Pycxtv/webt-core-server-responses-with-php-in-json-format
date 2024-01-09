@@ -1,8 +1,6 @@
 <?php
 
-namespace OnPHPoint\JsonResponses;
-
-require_once '../vendor/autoload.php';
+namespace OnPHPoint\JsonResponses\test;
 
 use PHPUnit\Framework\TestCase;
 
