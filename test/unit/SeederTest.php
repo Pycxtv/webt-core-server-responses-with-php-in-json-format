@@ -1,10 +1,9 @@
 <?php
 
-namespace OnPHPoint\JsonResponses\test;
+namespace OnPHPoint\JsonResponses;
 
 use Faker\Factory;
 use OnPHPoint\JsonResponses\Ost;
-use OnPHPoint\JsonResponses\Seeder;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 

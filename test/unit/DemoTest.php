@@ -1,6 +1,6 @@
 <?php
 
-namespace OnPHPoint\JsonResponses\test;
+namespace test\unit;
 
 use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\TestCase;

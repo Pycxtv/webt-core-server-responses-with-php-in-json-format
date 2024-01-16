@@ -1,6 +1,6 @@
 <?php
 
-namespace OnPHPoint\JsonResponses\test;
+namespace test\unit;
 
 use OnPHPoint\JsonResponses\Song;
 use PHPUnit\Framework\Attributes\CoversClass;
