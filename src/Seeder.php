@@ -3,7 +3,9 @@
 namespace OnPHPoint\JsonResponses;
 
 use Faker\Factory;
+use PHPUnit\Framework\Attributes\CoversClass;
 
+#[CoversClass(Seeder::class)]
 class Seeder {
 	private static int $songIdCounter = 1;
 	private static int $ostIdCounter = 1;
