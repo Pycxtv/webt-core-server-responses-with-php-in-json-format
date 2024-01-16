@@ -10,9 +10,7 @@ use PHPUnit\Framework\Attributes\CoversClass;
 #[CoversClass(Ost::class)]
 class OstTest extends TestCase
 {
-
     private ?Ost $ost;
-
 
     protected function setUp(): void
     {
