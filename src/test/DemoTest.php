@@ -2,8 +2,10 @@
 
 namespace OnPHPoint\JsonResponses\test;
 
+use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\TestCase;
 
+#[CoversNothing()]
 final class DemoTest extends TestCase
 {
     public function testPushAndPop(): void
