@@ -75,3 +75,4 @@ https://my.skilldisplay.eu/en/skillset/360
 ---
 
 - installing PHPUnit: `composer require --dev phpunit/phpunit`
+- installing `xdebug`: see [installation instructions](https://xdebug.org/wizard) or make use of PHPStorm
