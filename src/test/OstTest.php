@@ -5,7 +5,9 @@ namespace OnPHPoint\JsonResponses\test;
 use OnPHPoint\JsonResponses\Ost;
 use OnPHPoint\JsonResponses\Song;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
 
+#[CoversClass(Ost::class)]
 class OstTest extends TestCase
 {
 
