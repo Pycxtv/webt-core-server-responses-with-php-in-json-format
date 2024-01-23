@@ -38,4 +38,11 @@ class SeederTest extends TestCase {
 		$this->assertIsString($ost->name);
 	}
 
+
+	public function testOSTArrayGeneration() {
+		$numOSTs = 7;
+		$osts = Seeder::generateOSTs($numOSTs);
+		$this->assertCount($numOSTs, $osts);
+	}
+
 }
