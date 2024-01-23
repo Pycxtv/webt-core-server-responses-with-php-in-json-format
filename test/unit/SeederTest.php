@@ -17,7 +17,10 @@ class SeederTest extends TestCase {
 		$this->faker->seed(1234);
 	}
 
-	protected static function getOSTMethod($name): \ReflectionMethod {
+	/**
+	 * @throws \ReflectionException
+	 */
+	protected static function getSeederMethod($name): \ReflectionMethod {
 		$class = new ReflectionClass(Seeder::class);
 		return $class->getMethod($name);
 	}
@@ -27,7 +30,7 @@ class SeederTest extends TestCase {
 	 * @throws \ReflectionException
 	 */
 	public function testOSTGeneration() {
-		$generateOST = self::getOSTMethod("generateOST");
+		$generateOST = self::getSeederMethod("generateOST");
 		$ost = $generateOST->invoke($generateOST, $this->faker);
 
 		$this->assertObjectHasProperty("id", $ost);
